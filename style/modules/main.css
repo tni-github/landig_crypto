@@ -1,8 +1,10 @@
 .main__promo {
     min-height: 540px;
     padding: 127px 0;
-    background-image: url(../../image/promo-image.png);
+    background-image: url(../../image/promo-image.jpg);
+    background-color: #000;
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
 }
 
