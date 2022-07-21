@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="style/index.css">
     <script src="js/module/menu.js" defer></script>
     <script src="js/module/modal.js" defer></script>
+    <script src="js/module/tabs-about-us.js" defer></script>
+    <script src="js/module/exchange-rates.js" defer></script>
     <!--<script src="js/index.js" type="module"></script>-->
 </head>
 
@@ -33,9 +35,9 @@
             </button>
 
             <nav class="header__navigation navigation">
-                <ul class="navigation__list">
+                <ul class="navigation__list navigation__list_header">
                     <li class="navigation__item">
-                        <a href="#" class="navigation__link">Почему выбирают нас?</a>
+                        <a href="#about-us" class="navigation__link">Почему выбирают нас?</a>
                     </li>
                     <li class="navigation__item">
                         <a href="#" class="navigation__link">Частые вопросы</a>
@@ -53,6 +55,80 @@
                 <button class="promo__btn">Зарегистрироваться!</button>
             </div>
         </section>
+
+        <section class="about-us" id="about-us">
+            <div class="container">
+                <h2 class="about-us__title">
+                    Почему выбирают нас?
+                </h2>
+                <div class="about-us__container">
+                    <div class="about-us__advantage advantage">
+                        <ul class="advantage__list-btn">
+                            <li class="advantage__item">
+                                <button class="advantage__btn advantage__btn_active">Удобство</button>
+                            </li>
+
+                            <li class="advantage__item">
+                                <button class="advantage__btn">Скорость</button>
+                            </li>
+
+                            <li class="advantage__item">
+                                <button class="advantage__btn">Качество</button>
+                            </li>
+
+                            <li class="advantage__item">
+                                <button class="advantage__btn">Надежность</button>
+                            </li>
+                        </ul>
+
+                        <ul class="advantage__list-content">
+                            <li
+                                class="advantage__item-content advantage__item-content_convenience advantage__item-content_active">
+                                Наш сервис обмена
+                                криптовалюты Crypto интуитивно понятен и
+                                удобен в использовании. С нами просто.</li>
+                            <li class="advantage__item-content advantage__item-content_speed">У нас самая быстрая
+                                скорость
+                                по
+                                обмену криптовалюты по
+                                подобным сервисам в России</li>
+                            <li class="advantage__item-content advantage__item-content_quality">Нашу платформу выбирают
+                                миллионы
+                                людей</li>
+                            <li class="advantage__item-content advantage__item-content_security">Ваши пароли под
+                                надежной
+                                защитой.
+                                Нас невозможно взломать
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="about-us__exchange-rates exchange-rates">
+                        <h3 class="exchange-rates__title">Изменение курса в режиме реального времени</h3>
+
+                        <ul class="exchange-rates__list">
+                            <li class="exchange-rates__item exchange-rates__item_up">
+                                <span class="exchange-rates__currency">RUB/AUD</span>
+                                <span class="exchange-rates__value">25.59</span>
+                            </li>
+                            <li class="exchange-rates__item exchange-rates__item_down">
+                                <span class="exchange-rates__currency">HKD/BYR</span>
+                                <span class="exchange-rates__value">27.76</span>
+                            </li>
+                            <li class="exchange-rates__item exchange-rates__item_up">
+                                <span class="exchange-rates__currency">AUD/CNH</span>
+                                <span class="exchange-rates__value">72.68</span>
+                            </li>
+                            <li class="exchange-rates__item exchange-rates__item_up">
+                                <span class="exchange-rates__currency">JPY/GBP</span>
+                                <span class="exchange-rates__value">32.96</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <div class="overlay">
@@ -95,34 +171,23 @@
     </div>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer__info">
-                <div class="footer__info-logo">
-                    <img src="image/logo.svg" alt="Логотип компании">
-                </div>
+        <div class="container footer__container">
+            <img src="image/logo.svg" class="footer__logo" alt="Логотип компании">
 
-                <div class="footer__info-q">
-                    <p class="footer__info-q_why">
-                        Почему выбирают нас?
-                    </p>
-
-                    <p class="footer__info-q_faq">
-                        Частые вопросы
-                    </p>
-
-                </div>
+            <div class="footer__navigation navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item navigation__item_footer">
+                        <a href="#about-us" class="navigation__link">Почему выбирают нас?</a>
+                    </li>
+                    <li class="navigation__item navigation__item_footer">
+                        <a href="#" class="navigation__link">Частые вопросы</a>
+                    </li>
+                </ul>
             </div>
 
-            <div class="footer__design">
-                <div class="footer__copyrights">
-                    &copy; Crypto, 2022
-                </div>
+            <p class="footer__copyrights">&copy; Crypto, 2022</p>
 
-                <div class="footer__designer">
-                    <a href="https://tlgg.ru
-                    ">@Mrshmallowww</a>
-                </div>
-            </div>
+            <a href="https://t.me/Mrshmallowww" class="footer__designer">@Mrshmallowww</a>
         </div>
     </footer>
 </body>
