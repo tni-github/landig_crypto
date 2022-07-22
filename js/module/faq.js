@@ -26,6 +26,14 @@ const hide = (item, answer) => {
 };
 
 const show = (item, answer) => {
+    const openedBlocks = document.querySelectorAll('.faq__item_show');
+    const openedBlocksNumber = openedBlocks.length;
+    if (openedBlocksNumber) {
+        for (let i = 0; i < openedBlocksNumber; i++) {
+            openedBlocks[i].classList.remove('faq__item_show');
+        }
+    }
+
     if (item.classList.contains('faq__item_show') ||
         item.classList.contains('collapsing')) return;
 

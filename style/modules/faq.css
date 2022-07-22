@@ -49,6 +49,10 @@
     padding-top: 18px;
 }
 
+.faq__link {
+    color: #55c2ff;
+}
+
 /*.faq__question:after {
     content: '';
     width: 25px;
@@ -96,7 +100,10 @@
     .faq__question {
         font-size: 16px;
         line-height: 19px;
-        margin-bottom: 10px;
+    }
+
+    .faq__answer {
+        padding-top: 10px;
     }
 
     .faq__dropdown {

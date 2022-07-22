@@ -1,6 +1,7 @@
 @import 'normalize.css';
 @import 'fonts.css';
 @import 'default.css';
+@import 'modules/remark.css';
 @import 'modules/header.css';
 @import 'modules/navigation.css';
 @import 'modules/main.css';
