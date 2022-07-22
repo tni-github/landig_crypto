@@ -34,7 +34,6 @@
     justify-content: space-between;
     text-align: left;
     gap: 5px;
-    margin-bottom: 18px;
     font-size: 26px;
     line-height: 31px;
     /*padding: 18px 33px;*/
@@ -46,8 +45,8 @@
     transition: background-image 0.45s ease-in-out;
 }
 
-.faq__item:not(.faq__item_show) .faq__question {
-    margin-bottom: 0;
+.faq__answer {
+    padding-top: 18px;
 }
 
 /*.faq__question:after {
