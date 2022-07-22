@@ -4,6 +4,33 @@
     background-color: #08475e;
     z-index: 500;
     position: relative;
+    animation: blink-bg 10s ease-in-out infinite;
+    border-bottom: 1px solid transparent;
+    box-sizing: border-box;
+}
+
+@keyframes blink-bg {
+    0% {
+        background-color: #08475e;
+    }
+
+    25% {
+        background-color: #fff;
+        border-bottom: 1px solid #08475e;
+    }
+
+    50% {
+        background-color: #08475e;
+    }
+
+    75% {
+        background-color: #fff;
+        border-bottom: 1px solid #08475e;
+    }
+
+    100% {
+        background-color: #08475e;
+    }
 }
 
 .remark__text {
@@ -12,7 +39,33 @@
     line-height: 21px;
     text-align: center;
     color: #fff;
+    animation: blink-text 10s ease-in-out infinite;
 }
+
+@keyframes blink-text {
+    0% {
+        color: #fff;
+    }
+
+    25% {
+        color: #08475e;
+        font-weight: 700;
+    }
+
+    50% {
+        color: #fff;
+    }
+
+    75% {
+        color: #08475e;
+        font-weight: 700;
+    }
+
+    100% {
+        color: #fff;
+    }
+}
+
 
 @media (max-width: 1024px) {
     .remark {
