@@ -75,9 +75,7 @@
     background-image: url('../../image/security.svg');
 }
 
-@media (max-width: 1100px) {}
-
-@media (max-width: 768px) {
+@media (max-width: 795px) {
     .advantage__btn {
         width: 160px;
         height: 39px;
@@ -97,8 +95,10 @@
 @media (max-width: 700px) {
     .advantage__list-btn {
         flex-wrap: wrap;
+        max-width: 340px;
         gap: 10px;
-        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .advantage__btn {
