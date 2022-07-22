@@ -3,7 +3,8 @@
 };*/
 
 const hide = (item, answer) => {
-    if (!item.classList.contains('faq__item_show')) return;
+    if (!item.classList.contains('faq__item_show') ||
+        item.classList.contains('collapsing')) return;
 
     answer.style.height = `${answer.offsetHeight}px`;
     answer.offsetHeight;
@@ -13,16 +14,20 @@ const hide = (item, answer) => {
     answer.style.transition = 'height 0.45s ease-in-out';
     item.classList.remove('faq__item_show');
 
+    item.classList.add('collapsing');
+
     setTimeout(() => {
         answer.style.display = '';
         answer.style.height = '';
         answer.style.overflow = '';
         answer.style.transition = '';
+        item.classList.remove('collapsing');
     }, 360);
 };
 
 const show = (item, answer) => {
-    if (item.classList.contains('faq__item_show')) return;
+    if (item.classList.contains('faq__item_show') ||
+        item.classList.contains('collapsing')) return;
 
     answer.style.display = 'block';
     const height = answer.offsetHeight;
@@ -31,6 +36,7 @@ const show = (item, answer) => {
     answer.style.transition = 'height 0.45s ease-in-out';
     answer.offsetHeight;
     answer.style.height = `${height}px`;
+    item.classList.add('collapsing');
 
     setTimeout(() => {
         item.classList.add('faq__item_show');
@@ -38,6 +44,7 @@ const show = (item, answer) => {
         answer.style.height = '';
         answer.style.overflow = '';
         answer.style.transition = '';
+        item.classList.remove('collapsing');
     }, 360);
 };
 
@@ -51,10 +58,9 @@ const accordeon = () => {
             const item = button.closest('.faq__item');
             const answer = item.querySelector('.faq__answer');
 
-            item.classList.toggle('faq__item_show');
+            /*item.classList.toggle('faq__item_show');*/
 
-            item.classList.contains('faq__item_show') ? show(item, answer) : hide(item, answer);
-
+            item.classList.contains('faq__item_show') ? hide(item, answer) : show(item, answer);
         }
     })
 };
