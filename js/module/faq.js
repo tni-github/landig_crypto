@@ -30,8 +30,9 @@ const show = (item, answer) => {
     const openedBlocksNumber = openedBlocks.length;
     if (openedBlocksNumber) {
         for (let i = 0; i < openedBlocksNumber; i++) {
+            if(openedBlocks[i].classList.contains('faq__item_show')) {
             openedBlocks[i].classList.remove('faq__item_show');
-        }
+        }}
     }
 
     if (item.classList.contains('faq__item_show') ||
